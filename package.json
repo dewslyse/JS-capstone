@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dewslyse/JS-capstone#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "hint": "^6.1.11",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.1",
     "sass": "^1.49.9",
