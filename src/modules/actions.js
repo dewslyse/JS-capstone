@@ -1,14 +1,14 @@
-import { movieList } from "./apis.js";
+import movieList from './apis.js';
 
-//Display movies
-export const displayMovies = async (shows) => {
-    const listOfShows = document.querySelector('.show-list');
+// Display movies
+const displayMovies = async (shows) => {
+  const listOfShows = document.querySelector('.show-list');
 
-    shows = await movieList();
-    const truncated = shows.slice(0, 12);
+  shows = await movieList();
+  const truncated = shows.slice(0, 12);
 
-    truncated.forEach((item) => {
-        const show = `
+  truncated.forEach((item) => {
+    const show = `
         <article class="show-card">
           <div class="img-box">
             <img class="img" src="${item.image.medium}">
@@ -29,6 +29,8 @@ export const displayMovies = async (shows) => {
         </article>      
         `;
 
-        listOfShows.innerHTML += show;
-    });
+    listOfShows.innerHTML += show;
+  });
 };
+
+export default { displayMovies };
