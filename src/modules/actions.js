@@ -1,4 +1,7 @@
-import movieList from './apis.js';
+import { movieList } from './apis.js';
+
+// Counter
+const counter = (shows) => shows.length;
 
 // Display movies
 const displayMovies = async (shows) => {
@@ -31,6 +34,8 @@ const displayMovies = async (shows) => {
 
     listOfShows.innerHTML += show;
   });
+  const pageItems = document.querySelector('.home-count');
+  pageItems.textContent = `${counter(truncated)}`;
 };
 
-export default { displayMovies };
+export { displayMovies };

@@ -7,4 +7,4 @@ const movieList = async () => {
   return data;
 };
 
-export default { movieList };
+export { movieList };
