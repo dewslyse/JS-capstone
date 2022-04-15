@@ -29,4 +29,32 @@ const displayLikes = async (id) => {
   return count;
 };
 
-export { movieList, retrieveLikes, displayLikes };
+// Get movie comments
+const getMovieComments = async (id) => {
+  const response = await fetch(`${likesURL}/${appID}/comments?item_id=${id}`);
+  const data = await response.json();
+  return data;
+};
+
+// // Fetch movie details from API
+// const getMovieDetails = async (id) => {
+//   const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
+//   // const data = await response.json();
+//   return response;
+// };
+
+// Send Comments
+const postComment = async (id, username, comment) => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wwWCSD2YuNcNPNHza6Cc/comments', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id, username, comment }),
+  });
+  const res = await response.json();
+  return res;
+};
+postComment();
+
+export {
+  movieList, retrieveLikes, displayLikes, getMovieComments, postComment,
+};
