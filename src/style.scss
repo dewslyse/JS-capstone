@@ -219,17 +219,39 @@ li {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
+
+  footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .footer-box {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: 25px;
+  }
+
+  .footer-text {
+    text-align: left;
+  }
 }
 
 footer {
-  align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background-color: $dark-grayish-blue;
-  padding: 15px 0;
+  padding: 15px;
 }
 
 .footer-text {
+  text-align: center;
   color: $light-cyan;
-  font-weight: 500;
+  font-weight: 400;
+
+  a {
+    font-weight: 500;
+    color: $neon-green;
+    text-decoration: none;
+  }
 }
