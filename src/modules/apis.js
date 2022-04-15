@@ -48,7 +48,7 @@ const postComment = async (id, username, comment) => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wwWCSD2YuNcNPNHza6Cc/comments', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id, username, comment }),
+    body: JSON.stringify({ item_id: id, username, comment }),
   });
   const res = await response.json();
   return res;
