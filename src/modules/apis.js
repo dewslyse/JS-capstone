@@ -22,7 +22,7 @@ const displayLikes = async (id) => {
   const response = await Promise.resolve(retrieveLikes());
   let count = 0;
   for (let i = 0; i < response.length; i += 1) {
-    if (response[i].item_id === id) {
+    if (response[i].item_id === `${id}`) {
       count = response[i].likes;
     }
   }
