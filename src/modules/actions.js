@@ -41,15 +41,21 @@ const displayMovies = async (shows) => {
     listOfShows.innerHTML += show;
 
     const likeBtn = document.querySelectorAll('.fa-heart');
-    likeBtn.forEach((item) => {
-      item.addEventListener('click', async (e) => {
+
+    for (let i = 0; i < likeBtn.length; i += 1) {
+      likeBtn[i].addEventListener('click', async (e) => {
+        const likesCount = document.querySelectorAll('.likes-count');
+
+        const likes = parseInt(likesCount[i].textContent, 10) + 1;
+        likesCount[i].textContent = likes;
+
         await fetch(`${likesURL}${appID}/likes/`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ item_id: e.currentTarget.dataset.id }),
         });
       });
-    });
+    }
   });
   const pageItems = document.querySelector('.home-count');
   pageItems.textContent = `${counter(truncated)}`;
