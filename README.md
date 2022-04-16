@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leaderboard
+# JS-capstone
 
 > This JavaScript project is about building a web application based on an external API. We built our page using data from the TVmaze API and the Involvement API.
 
