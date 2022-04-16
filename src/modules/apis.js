@@ -36,13 +36,6 @@ const getMovieComments = async (id) => {
   return data;
 };
 
-// // Fetch movie details from API
-// const getMovieDetails = async (id) => {
-//   const response = await fetch(`https://api.tvmaze.com/shows/${id}`);
-//   // const data = await response.json();
-//   return response;
-// };
-
 // Send Comments
 const postComment = async (id, username, comment) => {
   const response = await fetch(`${likesURL}${appID}/comments`, {

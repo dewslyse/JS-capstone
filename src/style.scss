@@ -69,10 +69,8 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  // margin-right: 20px;
   font-size: 2rem;
   float: right;
-  // margin-top: -10%;
   color: $dark-blue;
   background-color: #fff;
   padding: 1px 10px;
@@ -96,20 +94,16 @@ body {
   color: #fff;
   padding-left: 0;
   margin-left: 0;
-  // display: block;
 }
 
 .form {
-  // border: 2px solid red;
   width: 40%;
   display: flex;
   flex-direction: column;
 }
 
 #pop-bottom {
-  // border: solid 3px green;
   display: flex;
-  // width:;
   justify-content: space-between;
 }
 
@@ -156,7 +150,6 @@ textarea {
   width: 58%;
 }
 
-////////////////////////////////////////////////////
 .header {
   display: flex;
   flex-direction: column;
@@ -211,7 +204,6 @@ li {
   padding: 3px 8px;
   font-size: 1rem;
   font-weight: 700;
-  // color: #fff;
   border-radius: 4px;
 }
 

@@ -76,7 +76,6 @@ const displayDetails = () => {
       const main = document.querySelector('.major');
       projectDetails.classList.add('showpopup');
       main.classList.add('blur');
-      // console.log(button.id);
       const movie = truncated[button.id - 1];
       const popupDetail = `<article class="detail-container" id="popup">
         <button type="button" id="popup-close" data-close-button class="close-button-project" >&times;</button>
@@ -123,7 +122,6 @@ const displayDetails = () => {
       const commentNumber = document.querySelector('.count');
 
       getMovieComments(button.id).then((response) => {
-        // console.log(response);
         if (response.error) {
           commentList.innerHTML += `
               <li>Be the first to comment</li>
