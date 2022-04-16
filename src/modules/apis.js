@@ -31,7 +31,7 @@ const displayLikes = async (id) => {
 
 // Get movie comments
 const getMovieComments = async (id) => {
-  const response = await fetch(`${likesURL}/${appID}/comments?item_id=${id}`);
+  const response = await fetch(`${likesURL}${appID}/comments?item_id=${id}`);
   const data = await response.json();
   return data;
 };
@@ -45,15 +45,13 @@ const getMovieComments = async (id) => {
 
 // Send Comments
 const postComment = async (id, username, comment) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wwWCSD2YuNcNPNHza6Cc/comments', {
+  const response = await fetch(`${likesURL}${appID}/comments`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ item_id: id, username, comment }),
   });
-  const res = await response.json();
-  return res;
+  return response;
 };
-postComment();
 
 export {
   movieList, retrieveLikes, displayLikes, getMovieComments, postComment,
