@@ -85,11 +85,11 @@ const displayDetails = () => {
             <h2 class="show-name">${movie.name}</h2>
             <p>${movie.summary}</p>
             <br>
-            <ul>
+            <ul class="info">
               <li>Language: ${movie.language}</li>
               <li>runtime: ${movie.averageRuntime} minutes</li>
             </ul>
-            <ul>
+            <ul class="info">
               <li>Rating: ${movie.rating.average}/10</li>
               <li>premiered: ${movie.premiered}</li>
             </ul>               
