@@ -72,7 +72,7 @@ To get a local copy up and running follow this simple step:
 
 - GitHub: [@dewslyse](https://github.com/kemigabocatherine)
 
-👤 **@dewslyse**
+👤 **Selase**
 
 - GitHub: [@dewslyse](https://github.com/dewslyse)
 
