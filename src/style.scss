@@ -19,9 +19,8 @@ body {
   background-color: $dark-blue;
 }
 
-///////////////////////////////////////////
 .popup-detail {
-  border: 3px solid red;
+  border: 3px solid #ff0000;
   position: fixed;
   top: 22px;
   right: 0;
@@ -35,7 +34,6 @@ body {
   display: flex;
   visibility: hidden;
   padding: 20px;
-  // margin-bottom: 10px;
 }
 
 .show-summary {
@@ -54,7 +52,6 @@ body {
 .firstdetails {
   display: flex;
   justify-content: space-between;
-  // border: 3px solid red;
   margin-right: 20px;
 }
 
@@ -153,6 +150,7 @@ textarea {
 #new-comment {
   text-align: right;
   margin-right: 175px;
+  font-size: 1.25rem;
 }
 
 .comment-list {
