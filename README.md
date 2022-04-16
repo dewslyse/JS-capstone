@@ -16,9 +16,9 @@
 - Webpack
 - API
 
-<!-- ## Live site 🚀
+## Live site 🚀
 
-🔗 [Live Site Link](https://dewslyse.github.io/JS-capstone/) -->
+🔗 [Live Site Link](https://dewslyse.github.io/JS-capstone/)
 
 ## Getting Started
 
