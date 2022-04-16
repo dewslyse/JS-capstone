@@ -9,6 +9,8 @@ const appID = 'wwWCSD2YuNcNPNHza6Cc';
 
 // Counter
 const counter = (arr) => arr.length;
+const commentsCounter = (element) => element.childElementCount;
+
 let truncated = [];
 // Display movies
 const displayMovies = async (shows) => {
@@ -71,7 +73,7 @@ const displayDetails = () => {
   commentButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const projectDetails = document.querySelector('.popup-detail');
-      const main = document.querySelector('.major');
+      const main = document.querySelector('body');
       projectDetails.classList.add('showpopup');
       main.classList.add('blur');
       // console.log(button.id);
@@ -119,7 +121,6 @@ const displayDetails = () => {
       const commentList = document.createElement('ul');
       commentList.classList.add('comment-list');
       const commentNumber = document.querySelector('.count');
-      commentNumber.textContent = `${counter(commentList)}`;
 
       getMovieComments(button.id).then((response) => {
         // console.log(response);
@@ -132,6 +133,7 @@ const displayDetails = () => {
             commentList.innerHTML += `
               <li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>
             `;
+            commentNumber.textContent = `${commentsCounter(commentList)}`;
           });
         }
       },
@@ -159,6 +161,7 @@ const displayDetails = () => {
                 commentList.innerHTML += `
               <li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>
             `;
+                commentNumber.textContent = `${commentsCounter(commentList)}`;
               });
             }
           },
