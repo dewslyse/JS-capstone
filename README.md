@@ -2,11 +2,11 @@
 
 # Leaderboard
 
-> This JavaScript project is about building a web application based on an external API.
+> This JavaScript project is about building a web application based on an external API. We built our page using data from the TVmaze API and the Involvement API.
 
 ## Screenshot
 
-<!-- <img src="./screenshot.png"> -->
+<img src="./screenshot.png">
 
 ## Built With
 
@@ -38,7 +38,6 @@ To get a local copy up and running follow this simple step:
 
 - **Base URL**: `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/`
 - To generate a unique identifier, send a POST action to `Base URL` + `/apps/`. (No parameters required);
-```
 
 - Return value: unique identifier for the app
 ```
