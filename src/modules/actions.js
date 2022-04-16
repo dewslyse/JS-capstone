@@ -73,7 +73,7 @@ const displayDetails = () => {
   commentButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const projectDetails = document.querySelector('.popup-detail');
-      const main = document.querySelector('body');
+      const main = document.querySelector('.major');
       projectDetails.classList.add('showpopup');
       main.classList.add('blur');
       // console.log(button.id);
