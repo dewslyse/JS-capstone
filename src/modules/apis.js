@@ -29,4 +29,23 @@ const displayLikes = async (id) => {
   return count;
 };
 
-export { movieList, retrieveLikes, displayLikes };
+// Get movie comments
+const getMovieComments = async (id) => {
+  const response = await fetch(`${likesURL}${appID}/comments?item_id=${id}`);
+  const data = await response.json();
+  return data;
+};
+
+// Send Comments
+const postComment = async (id, username, comment) => {
+  const response = await fetch(`${likesURL}${appID}/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ item_id: id, username, comment }),
+  });
+  return response;
+};
+
+export {
+  movieList, retrieveLikes, displayLikes, getMovieComments, postComment,
+};
