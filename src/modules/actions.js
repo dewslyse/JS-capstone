@@ -175,4 +175,6 @@ const displayDetails = () => {
   });
 };
 
-export { displayMovies, displayDetails };
+export {
+  displayMovies, displayDetails, counter, commentsCounter,
+};
