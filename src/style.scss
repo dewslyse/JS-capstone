@@ -19,9 +19,11 @@ body {
   background-color: $dark-blue;
 }
 
+///////////////////////////////////////////
 .popup-detail {
-  position: fixed;
-  top: 0;
+  border: 3px solid red;
+  position: relative;
+  top: 60px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -31,20 +33,17 @@ body {
   background-color: #fff;
   z-index: 10;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   visibility: hidden;
-  opacity: 0;
-  border: 1px solid #dfe1e6;
-  border-radius: 0;
-  padding-top: 30px;
-  padding-bottom: 19%;
-  
-  padding-right: 1%;
+  padding: 30px;
 }
 
 .show-summary {
-  width: 40%;
+  width: 65%;
+}
+
+.img-container {
+  width: 30%;
+  margin-top: 8px;
 }
 
 .image {
@@ -54,6 +53,8 @@ body {
 .firstdetails {
   display: flex;
   justify-content: space-between;
+  // border: 3px solid red;
+  margin-right: 20px;
 }
 
 .showpopup {
@@ -71,11 +72,19 @@ body {
 }
 
 #popup-close {
-  font-size: 200%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  // margin-right: 20px;
+  font-size: 2rem;
   float: right;
-  margin-top: -10%;
-  color: #67798e;
+  // margin-top: -10%;
+  color: $dark-blue;
+  background-color: #fff;
+  padding: 1px 10px;
+  border-radius: 50%;
   transition: all 0.2s;
+  border-color: red;
 }
 
 #popup-close:hover {
@@ -87,6 +96,30 @@ body {
   color: #67798e;
 }
 
+.info {
+  margin-bottom: 10px;
+  color: #fff;
+  padding-left: 0;
+  margin-left: 0;
+  // display: block;
+}
+
+.form {
+  border: 2px solid red;
+  width: 40%;
+}
+
+#pop-bottom {
+  border: solid 3px green;
+  display: flex;
+  // width:;
+}
+
+.comment-list {
+  width: 58%;
+}
+
+////////////////////////////////////////////////////
 .header {
   display: flex;
   flex-direction: column;

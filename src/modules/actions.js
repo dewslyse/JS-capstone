@@ -75,14 +75,15 @@ const displayDetails = () => {
       main.classList.add('blur');
       // console.log(button.id);
       const movie = truncated[button.id - 1];
-      const popupDetail = `<article class="detail-container" id="popup">
+      const popupDetail =
+        `<article class="detail-container" id="popup">
         <button type="button" id="popup-close" data-close-button class="close-button-project" >&times;</button>
-        <div class=" firstdetails">
+        <div class="firstdetails">
           <div class="img-container">
             <img class="image" src="${movie.image.medium}">
           </div>
           <div class="show-summary">
-            <h2 class="show-name">${movie.name}</h2>
+            <h2 class="pop-name">${movie.name}</h2>
             <p>${movie.summary}</p>
             <br>
             <ul class="info">
@@ -94,7 +95,8 @@ const displayDetails = () => {
               <li>premiered: ${movie.premiered}</li>
             </ul>               
           </div>
-        </div>            
+        </div>    
+        <div id="pop-bottom">        
           <form class="form">
             <h2 class="add-title">Add a comment</h2> 
             <input type="text" name="add-name" id="add-name" placeholder="Your name" required> 
@@ -103,8 +105,9 @@ const displayDetails = () => {
               <button class="add-btn" type="submit">Comment</button>
             </div>
           </form> 
-        </article>
-      `;
+        </div>
+      </article>
+    `;
       projectDetails.innerHTML = popupDetail;
       const closePopup = projectDetails.querySelector('[data-close-button]');
       closePopup.addEventListener('click', () => {
@@ -113,6 +116,7 @@ const displayDetails = () => {
       });
 
       const commentList = document.createElement('ul');
+      commentList.classList.add('comment-list');
       getMovieComments(button.id).then((response) => {
         // console.log(response);
         if (response.error) {
@@ -127,12 +131,12 @@ const displayDetails = () => {
           });
         }
       },
-      (error) => {
-        commentList.innerHTML += `
+        (error) => {
+          commentList.innerHTML += `
               <li>Be the first to comment</li>
             `;
-      });
-      const popupElement = document.getElementById('popup');
+        });
+      const popupElement = document.getElementById('pop-bottom');
       popupElement.appendChild(commentList);
       const commentForm = document.querySelector('.form');
       commentForm.addEventListener('submit', (e) => {
@@ -154,11 +158,11 @@ const displayDetails = () => {
               });
             }
           },
-          (error) => {
-            commentList.innerHTML += `
+            (error) => {
+              commentList.innerHTML += `
               <li>Be the first to comment</li>
             `;
-          });
+            });
         });
         commentForm.reset();
       });
