@@ -1,4 +1,7 @@
-/* * @jest-environment jsdom */
+/*
+ * @jest-environment jsdom
+ */
+
 import { counter, commentsCounter } from './modules/actions.js';
 
 describe('Count items on Homepage', () => {
@@ -10,7 +13,7 @@ describe('Count items on Homepage', () => {
 
 let comments;
 const testDiv = `
-  <ul class="comment-box">
+  <ul id="comment-box">
     <li>a</li>
     <li>b</li>
     <li>c</li>
@@ -18,11 +21,9 @@ const testDiv = `
 `;
 
 describe('Count number of comments', () => {
-  beforeAll(() => {
-    document.body.innerHTML = testDiv;
-    comments = document.querySelectorAll('.comment-box li');
-  });
+  document.body.innerHTML = testDiv;
+  comments = document.querySelector('#comment-box');
   test('Number of comments', () => {
-    expect(commentsCounter(comments)).toHaveALength(3);
+    expect(commentsCounter(comments)).toBe(3);
   });
 });
