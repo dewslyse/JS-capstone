@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# JS-capstone
+# JS-capstone: MicroTV web app
 
 > This JavaScript project is about building a web application based on an external API. We built our page using data from the TVmaze API and the Involvement API.
 
@@ -70,7 +70,7 @@ To get a local copy up and running follow this simple step:
 
 👤 **Cathy**
 
-- GitHub: [@dewslyse](https://github.com/kemigabocatherine)
+- GitHub: [@kemigabocatherine](https://github.com/kemigabocatherine)
 
 👤 **Selase**
 
